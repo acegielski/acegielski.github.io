@@ -30,34 +30,29 @@
   function addNavData(){
     let navmaker = $('#navmaker');
     navmaker.attr("data-step", "1");
-    navmaker.attr("data-intro", "Welcome to our course! You are on the Course Outline page. Click on the 'next' button or press the right arrow key to continue. Press 'escape' or click 'done' to quit this tour.");
+    navmaker.attr("data-intro", "View the code annotation. Click on the 'next' button or press the right arrow key to continue. Press 'escape' or click 'done' to quit this tour.");
     navmaker.attr("data-position", "right");
 
+    let ttest = $('.course-tabs .active');
+    ttest.attr("data-step", "2");
+   	ttest.attr("data-intro", "We want to compare performances between periods");
+    ttest.attr("data-position", "right");
+
     let courseware = $('.course-tabs .active');
-    courseware.attr("data-step", "2");
-    courseware.attr("data-intro", "The course outline, including pages with all the videos, problems, and more, can all be found in the Course link.");
+    courseware.attr("data-step", "3");
+    courseware.attr("data-intro", "We want to compare performances between periods");
     courseware.attr("data-position", "right");
 
     let discussion = $('.course-tabs').find('a:contains("Discussion")');
-    discussion.attr("data-step", "3");
-    discussion.attr("data-intro", "The Discussion link sends you to the discussion boards, where you can talk to your fellow students.");
+    discussion.attr("data-step", "4");
+    discussion.attr("data-intro", "We set “alternative” to “greater” because the test is one-sided.");
     discussion.attr("data-position", "right");
 
     let progress = $('.course-tabs').find('a:contains("Progress")');
-    progress.attr("data-step", "4");
-    progress.attr("data-intro", "The Progress tab is where you can find your grade.");
-    progress.attr("data-position", "right");
+    progress.attr("data-step", "5");
+    progress.attr("data-intro", "Because we are comparing Q4 to Q1-Q3 for each store within each year, we know these data are paired, and set “paired” to TRUE", "right");
 
-    let syllabus = $('.course-tabs').find('a:contains("Syllabus")');
-    syllabus.attr("data-step", "5");
-    syllabus.attr("data-intro", "The Syllabus tab will tell you about the course contents and policies. You will want to read this early.");
-    syllabus.attr("data-position", "right");
 
-    let outline = $('.course-outline > ol').find(">:first-child");
-    console.log(outline);
-    outline.attr("data-step", "6");
-    outline.attr("data-intro", "Finally, this clickable course outline will help you navigate through our material. Click the Done button or press Escape and you're ready to go!");
-    outline.attr("data-position", "top");
 
   }
 </script>
@@ -73,4 +68,4 @@
 
 <p>Because we are comparing a continuous variable between two groups, we need to run a one-sided t-test:</p>
 
-<code><span id="couseware">t.test</span>(bark.data.grouped$Performance ~ bark.data.grouped$Period, alternative="greater", paired=TRUE)</code>
+<code><span id="ttest">t.test</span><span id="courseware">(bark.data.grouped$Performance ~ bark.data.grouped$Period, </span><span id="discussion">alternative="greater"</span>, <span id="progress">paired=TRUE)</span></code>
