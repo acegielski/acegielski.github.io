@@ -33,22 +33,22 @@
     navmaker.attr("data-intro", "View the code annotation. Click on the 'next' button or press the right arrow key to continue. Press 'escape' or click 'done' to quit this tour.");
     navmaker.attr("data-position", "right");
 
-    let ttest = $('.course-tabs .active');
+    let ttest = $('ttest');
     ttest.attr("data-step", "2");
    	ttest.attr("data-intro", "We want to compare performances between periods");
     ttest.attr("data-position", "right");
 
-    let courseware = $('.course-tabs .active');
+    let courseware = $('courseware');
     courseware.attr("data-step", "3");
     courseware.attr("data-intro", "We want to compare performances between periods");
     courseware.attr("data-position", "right");
 
-    let discussion = $('.course-tabs').find('a:contains("Discussion")');
+    let discussion = $('discussion);
     discussion.attr("data-step", "4");
     discussion.attr("data-intro", "We set “alternative” to “greater” because the test is one-sided.");
     discussion.attr("data-position", "right");
 
-    let progress = $('.course-tabs').find('a:contains("Progress")');
+    let progress = $('progress');
     progress.attr("data-step", "5");
     progress.attr("data-intro", "Because we are comparing Q4 to Q1-Q3 for each store within each year, we know these data are paired, and set “paired” to TRUE", "right");
 
