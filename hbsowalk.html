@@ -32,26 +32,26 @@
     let navmaker = $('#navmaker');
     navmaker.attr("data-step", "1");
     navmaker.attr("data-intro", "View the code annotation. Click on the 'next' button or press the right arrow key to continue. Press 'escape' or click 'done' to quit this tour.");
-    navmaker.attr("data-position", "right");
+    navmaker.attr("data-position", "bottom");
 
     let ttest = $('#ttest');
     ttest.attr("data-step", "2");
-   	ttest.attr("data-intro", "We want to compare performances between periods");
-    ttest.attr("data-position", "right");
+   	ttest.attr("data-intro", "Perform a t-test");
+    ttest.attr("data-position", "bottom");
 
-    let courseware = $('#courseware');
-    courseware.attr("data-step", "3");
-    courseware.attr("data-intro", "We want to compare performances between periods");
-    courseware.attr("data-position", "right");
+    let x2 = $('#courseware');
+    x2.attr("data-step", "3");
+    x2.attr("data-intro", "We want to compare performances between periods");
+    x2.attr("data-position", "bottom");
 
-    let discussion = $('#discussion');
-    discussion.attr("data-step", "4");
-    discussion.attr("data-intro", "We set “alternative” to “greater” because the test is one-sided.");
-    discussion.attr("data-position", "right");
+    let x3 = $('#discussion');
+    x3.attr("data-step", "4");
+    x3.attr("data-intro", "We set “alternative” to “greater” because the test is one-sided.");
+    x3.attr("data-position", "bottom");
 
-    let progress = $('#progress');
-    progress.attr("data-step", "5");
-    progress.attr("data-intro", "Because we are comparing Q4 to Q1-Q3 for each store within each year, we know these data are paired, and set “paired” to TRUE", "right");
+    let x4 = $('#progress');
+    x4.attr("data-step", "5");
+    x4.attr("data-intro", "Because we are comparing Q4 to Q1-Q3 for each store within each year, we know these data are paired, and set “paired” to TRUE", "bottom");
 
   }
 </script>
@@ -67,4 +67,4 @@
 
 <p>Because we are comparing a continuous variable between two groups, we need to run a one-sided t-test:</p>
 
-<code><span id="ttest">t.test</span><span id="courseware">(bark.data.grouped$Performance ~ bark.data.grouped$Period, </span><span id="discussion">alternative="greater"</span>, <span id="progress">paired=TRUE)</span></code>
+<code><span id="ttest">t.test</span><span id="x2">(bark.data.grouped$Performance ~ bark.data.grouped$Period, </span><span id="x3">alternative="greater"</span>, <span id="x4">paired=TRUE)</span></code>
